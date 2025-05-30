@@ -8,15 +8,15 @@ Este proyecto es una aplicación web en HTML diseñada para que los clientes pue
 ─ database/ # Archivos relacionados con la base de datos (configuración, scripts)
 ─ html/ # Archivos HTML (vistas de la app)
 ─ js/ # Archivos JavaScript (funcionalidad de la app)
-─ media/ # Imágenes y recursos multimedia
+─ media/ # Imagenes y recursos multimedia
 ─ index.html # Archivo principal de entrada (landing page)
-─ package.json # Configuración de dependencias y scripts de Node.js
+─ package.json # Configuracion de dependencias y scripts de Node.js
 ─ package-lock.json # Detalles de las dependencias
 ─ server.js # Servidor Node.js para manejar peticiones
-─ README.md # Documentación del proyecto
+─ README.md # Documentacion del proyecto
 
 
-## Características
+## Caracteristicas
 
 - Consultar el menú de forma interactiva  
 - Realizar pedidos desde la mesa  
