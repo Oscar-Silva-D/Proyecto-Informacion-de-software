@@ -16,7 +16,7 @@ Este proyecto es una aplicación web en HTML diseñada para que los clientes pue
 ─ README.md # Documentación del proyecto
 
 
-## 🚀 Características
+## Características
 
 - Consultar el menú de forma interactiva  
 - Realizar pedidos desde la mesa  
@@ -24,12 +24,12 @@ Este proyecto es una aplicación web en HTML diseñada para que los clientes pue
 - Servidor backend en Node.js para gestionar pedidos y base de datos  
 - Posibilidad para modificar el menu mediante una pestaña de administracio.
   
-## ⚙️ Instalación
+## Instalación
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
-   cd nombre-del-repositorio
+   git clone https://github.com/Oscar-Silva-D/Proyecto-Informacion-de-software.git
+   cd Proyecto-Informacion-de-software
    ```
    
 2. Instala las dependencias:
