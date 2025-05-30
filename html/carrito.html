@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">MiLogo</a>
+    <div class="header-buttons">
+      <a href="menu.html" class="back-btn">
+        <span class="material-icons">arrow_back</span>
+        Volver al Menú
+      </a>
+    </div>
+  </header>
+
+  <main class="cart-container">
+    <h2>Tu Carrito de Compras</h2>
+    
+    <div id="cart-items" class="cart-items">
+      <!-- Los items del carrito se mostrarán aquí -->
+    </div>
+
+    <div id="cart-summary" class="cart-summary">
+      <h3>Resumen de la Compra</h3>
+      <div class="summary-item">
+        <span>Subtotal:</span>
+        <span id="subtotal">$0.00</span>
+      </div>
+      <div class="summary-item">
+        <span>IVA (19%):</span>
+        <span id="iva">$0.00</span>
+      </div>
+      <div class="summary-item total">
+        <span>Total:</span>
+        <span id="total">$0.00</span>
+      </div>
+    </div>
+
+    <div id="payment-section" class="payment-section">
+      <h3>Método de Pago</h3>
+      <form id="payment-form" class="payment-form">
+        <div class="payment-options">
+          <div class="payment-option">
+            <input type="radio" id="tarjeta" name="metodoPago" value="tarjeta" required>
+            <label for="tarjeta">
+              <span class="material-icons">credit_card</span>
+              Tarjeta de Crédito
+            </label>
+          </div>
+          <div class="payment-option">
+            <input type="radio" id="pse" name="metodoPago" value="pse" required>
+            <label for="pse">
+              <span class="material-icons">account_balance</span>
+              PSE
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="confirm-button">
+          <span class="material-icons">check_circle</span>
+          Confirmar Pedido
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      cartManager.updateCartDisplay();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">MiLogo</a>
+    <div class="header-buttons">
+      <a href="carrito.html" class="cart-btn" data-href="carrito.html">
+        <span class="material-icons">shopping_cart</span>
+        <span class="cart-count">0</span>
+      </a>
+      <a href="Seguimiento.html" class="orders-btn" id="tracking-btn" style="display: none;">
+        <span class="material-icons">receipt_long</span>
+        <span>Seguir Pedido</span>
+      </a>
+    </div>
+  </header>
+
+  <nav>
+    <!-- Category buttons will be generated here -->
+  </nav>
+
+  <div class="menu-section">
+    <!-- Product cards will be generated here -->
+  </div>
+
+  <!-- Load JavaScript files -->
+  <script src="../js/cart.js"></script>
+  <script src="../js/menu.js"></script>
+
+  <script>
+    // Show tracking button if there's an active order
+    document.addEventListener('DOMContentLoaded', () => {
+      const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+      if (orders.length > 0) {
+        const lastOrder = orders[orders.length - 1];
+        if (lastOrder.status !== 'entregado') {
+          const trackingBtn = document.getElementById('tracking-btn');
+          trackingBtn.style.display = 'flex';
+          trackingBtn.href = `Seguimiento.html?orderId=${lastOrder.id}`;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
